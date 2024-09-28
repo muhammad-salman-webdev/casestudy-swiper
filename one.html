@@ -1,0 +1,396 @@
+<style>
+  .custom-ct-swiper-container {
+    max-width: 1280px;
+    width: 90%;
+    height: 480px;
+    margin: 0 auto;
+
+    .custom-ct-swipwer-main {
+      .custom-ct-swiper {
+        overflow: hidden;
+        border-radius: 28px;
+        overflow: hidden;
+
+        .custom-ct-swiper-slide-container {
+          display: flex;
+          height: 100%;
+
+          .ct-swiper-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+            padding: 0 7%;
+
+            .label {
+              font-family: "Roboto";
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 20px;
+              letter-spacing: 0.1px;
+              padding: 3px 6px;
+              background: #2a49e5;
+              border-radius: 6px;
+              color: #fff;
+              max-width: max-content;
+            }
+
+            h2 {
+              font-family: "Inter";
+              font-size: 28px;
+              font-weight: 400;
+              line-height: 36px;
+              letter-spacing: 0.12800000607967377px;
+              color: #1d1d1f;
+              margin: 20px 0 14px;
+            }
+
+            p {
+              font-family: "Inter";
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: -0.27000001072883606px;
+              color: #1d1d1f;
+            }
+
+            ._btn {
+              margin-top: 26px;
+              font-family: "Inter";
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 26px;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 14px;
+              width: max-content;
+              padding: 12px 60px;
+              position: relative;
+              overflow: hidden;
+              border-radius: 5px;
+              box-shadow: none;
+              outline: none;
+              transition: all 0.3s ease;
+              color: #ffffff;
+              background: #121212;
+              padding: 12px 60px;
+              text-decoration: none;
+
+              & > * {
+                position: relative;
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-size: 200%;
+                transition: 0.5s ease-out;
+                content: "";
+                left: -1px;
+                top: -1px;
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
+                transform: scale(0, 1);
+                transform-origin: left;
+                background: #5e5f68;
+              }
+
+              &:hover {
+                &::before {
+                  transform: scale(1, 1);
+                }
+              }
+            }
+          }
+
+          .ct-swiper-image {
+            width: 50%;
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .custom-ct-actions {
+        margin-top: 40px;
+        padding: 0 20px 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .custom-ct-swiper-pagination {
+          max-width: max-content;
+
+          .swiper-pagination-bullet {
+            background: #afb0b5;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 8px;
+            width: 8px;
+            margin: 0 6px;
+            opacity: 1;
+
+            &:hover {
+              background: #87888b;
+            }
+
+            &.swiper-pagination-bullet-active {
+              background: #9999a0;
+              width: 48px;
+            }
+          }
+        }
+
+        .custom-ct-act-btns {
+          display: flex;
+          gap: 14px;
+
+          button {
+            width: 36px;
+            aspect-ratio: 1/1;
+            display: grid;
+            align-items: center;
+            border: none;
+            outline: none;
+            background: #dbe1e7;
+            color: #abb0b4;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+              background: #cbd2d9;
+              color: #595c5f;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .custom-ct-swiper-container {
+      height: max-content;
+
+      .custom-ct-swipwer-main {
+        .custom-ct-swiper {
+          border: 1px solid #dadce0;
+          border-radius: 20px;
+
+          .custom-ct-swiper-slide-container {
+            flex-direction: column-reverse;
+
+            .ct-swiper-content {
+              width: 100%;
+              padding: 50px 30px;
+              position: relative;
+              align-items: center;
+
+              .label {
+                position: absolute;
+                top: -13px;
+                padding: 4px 25px;
+              }
+
+              h2 {
+                align-self: flex-start;
+              }
+
+              p {
+                align-self: flex-start;
+              }
+            }
+
+            .ct-swiper-image {
+              width: 100%;
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .custom-ct-swiper-container {
+      .custom-ct-swipwer-main {
+        .custom-ct-swiper {
+          .custom-ct-swiper-slide-container {
+            .ct-swiper-content {
+              width: 100%;
+              padding: 25px 20px;
+            }
+          }
+        }
+
+        .custom-ct-actions {
+          justify-content: center;
+
+          .custom-ct-act-btns {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<div class="custom-ct-swiper-container">
+  <div class="custom-ct-swipwer-main">
+    <!-- Slider main container -->
+    <div class="custom-ct-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <div class="custom-ct-swiper-slide-container">
+            <!-- Content -->
+            <div class="ct-swiper-content">
+              <span class="label"> Case Study </span>
+              <h2>
+                Sony PlayStation <br />
+                Android App Title
+              </h2>
+              <p>
+                Choose a case. Pick a band.Configure your perfect watch
+                Configure your perfect watch.Configure your perfect Configure
+                your perfect watch.Configure your perfect
+              </p>
+              <a href="#" class="_btn btn_light">
+                <span>Explore</span>
+                <i class="fa-regular fa-arrow-right-long"></i>
+              </a>
+            </div>
+            <!-- Image -->
+            <div class="ct-swiper-image">
+              <img
+                src="https://wordpress-1121700-4853242.cloudwaysapps.com/wp-content/uploads/2024/09/casestudy-slider-img-01.png"
+                alt="#" />
+            </div>
+          </div>
+        </div>
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <div class="custom-ct-swiper-slide-container">
+            <!-- Content -->
+            <div class="ct-swiper-content">
+              <span class="label"> Case Study </span>
+              <h2>
+                Sony PlayStation <br />
+                Android App Title
+              </h2>
+              <p>
+                Choose a case. Pick a band.Configure your perfect watch
+                Configure your perfect watch.Configure your perfect Configure
+                your perfect watch.Configure your perfect
+              </p>
+              <a href="#" class="_btn btn_light">
+                <span>Explore</span>
+                <i class="fa-regular fa-arrow-right-long"></i>
+              </a>
+            </div>
+            <!-- Image -->
+            <div class="ct-swiper-image">
+              <img
+                src="https://wordpress-1121700-4853242.cloudwaysapps.com/wp-content/uploads/2024/09/casestudy-slider-img-01.png"
+                alt="#" />
+            </div>
+          </div>
+        </div>
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <div class="custom-ct-swiper-slide-container">
+            <!-- Content -->
+            <div class="ct-swiper-content">
+              <span class="label"> Case Study </span>
+              <h2>
+                Sony PlayStation <br />
+                Android App Title
+              </h2>
+              <p>
+                Choose a case. Pick a band.Configure your perfect watch
+                Configure your perfect watch.Configure your perfect Configure
+                your perfect watch.Configure your perfect
+              </p>
+              <a href="#" class="_btn btn_light">
+                <span>Explore</span>
+                <i class="fa-regular fa-arrow-right-long"></i>
+              </a>
+            </div>
+            <!-- Image -->
+            <div class="ct-swiper-image">
+              <img
+                src="https://wordpress-1121700-4853242.cloudwaysapps.com/wp-content/uploads/2024/09/casestudy-slider-img-01.png"
+                alt="#" />
+            </div>
+          </div>
+        </div>
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <div class="custom-ct-swiper-slide-container">
+            <!-- Content -->
+            <div class="ct-swiper-content">
+              <span class="label"> Case Study </span>
+              <h2>
+                Sony PlayStation <br />
+                Android App Title
+              </h2>
+              <p>
+                Choose a case. Pick a band.Configure your perfect watch
+                Configure your perfect watch.Configure your perfect Configure
+                your perfect watch.Configure your perfect
+              </p>
+              <a href="#" class="_btn btn_light">
+                <span>Explore</span>
+                <i class="fa-regular fa-arrow-right-long"></i>
+              </a>
+            </div>
+            <!-- Image -->
+            <div class="ct-swiper-image">
+              <img
+                src="https://wordpress-1121700-4853242.cloudwaysapps.com/wp-content/uploads/2024/09/casestudy-slider-img-01.png"
+                alt="#" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slider Actions -->
+    <div class="custom-ct-actions">
+      <div class="custom-ct-swiper-pagination"></div>
+      <div class="custom-ct-act-btns">
+        <button class="custom-ct-swiper-button prev">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button class="custom-ct-swiper-button next">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const CustomCSswiper = new Swiper(".custom-ct-swiper", {
+    loop: true,
+
+    pagination: {
+      el: ".custom-ct-swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".custom-ct-swiper-button.next",
+      prevEl: ".custom-ct-swiper-button.prev",
+    },
+  });
+</script>

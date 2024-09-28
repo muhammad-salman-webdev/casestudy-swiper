@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: #E7ECF2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-ct-swiper-container {
+    max-width: 1280px;
+    width: 90%;
+    height: 480px;
+
+    .custom-ct-swipwer-main {
+        .custom-ct-swiper {
+            overflow: hidden;
+            border-radius: 28px;
+            overflow: hidden;
+
+            .custom-ct-swiper-slide-container {
+                display: flex;
+                height: 100%;
+
+                .ct-swiper-content {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: white;
+                    padding: 0 7%;
+
+                    .label {
+                        font-family: 'Roboto';
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        letter-spacing: 0.1px;
+                        padding: 3px 6px;
+                        background: #2A49E5;
+                        border-radius: 6px;
+                        color: #fff;
+                        max-width: max-content;
+                    }
+
+                    h2 {
+                        font-family: 'Inter';
+                        font-size: 28px;
+                        font-weight: 400;
+                        line-height: 36px;
+                        letter-spacing: 0.12800000607967377px;
+                        color: #1D1D1F;
+                        margin: 20px 0 14px;
+                    }
+
+                    p {
+                        font-family: 'Inter';
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: -0.27000001072883606px;
+                        color: #1D1D1F;
+                    }
+
+                    ._btn {
+                        margin-top: 26px;
+                        font-family: "Inter";
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 26px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 14px;
+                        width: max-content;
+                        padding: 12px 60px;
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        box-shadow: none;
+                        outline: none;
+                        transition: all 0.3s ease;
+                        color: #ffffff;
+                        background: #121212;
+                        padding: 12px 60px;
+                        text-decoration: none;
+
+                        &>* {
+                            position: relative;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            background-size: 200%;
+                            transition: 0.5s ease-out;
+                            content: "";
+                            left: -1px;
+                            top: -1px;
+                            width: calc(100% + 2px);
+                            height: calc(100% + 2px);
+                            transform: scale(0, 1);
+                            transform-origin: left;
+                            background: #5e5f68;
+                        }
+
+                        &:hover {
+                            &::before {
+                                transform: scale(1, 1);
+                            }
+                        }
+                    }
+                }
+
+                .ct-swiper-image {
+                    width: 50%;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .custom-ct-actions {
+            margin-top: 40px;
+            padding: 0 20px 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .custom-ct-swiper-pagination {
+                max-width: max-content;
+
+                .swiper-pagination-bullet {
+                    background: #afb0b5;
+                    border-radius: 10px;
+                    transition: all .3s ease;
+                    height: 8px;
+                    width: 8px;
+                    margin: 0 6px;
+                    opacity: 1;
+
+                    &:hover {
+                        background: #87888b;
+                    }
+
+                    &.swiper-pagination-bullet-active {
+                        background: #9999a0;
+                        width: 48px;
+                    }
+                }
+            }
+
+            .custom-ct-act-btns {
+                display: flex;
+                gap: 14px;
+
+                button {
+                    width: 36px;
+                    aspect-ratio: 1/1;
+                    display: grid;
+                    align-items: center;
+                    border: none;
+                    outline: none;
+                    background: #DBE1E7;
+                    color: #ABB0B4;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    transition: all .3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #CBD2D9;
+                        color: #595C5F;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .custom-ct-swiper-container {
+        height: max-content;
+
+        .custom-ct-swipwer-main {
+            .custom-ct-swiper {
+                border: 1px solid #DADCE0;
+                border-radius: 20px;
+
+                .custom-ct-swiper-slide-container {
+                    flex-direction: column-reverse;
+
+                    .ct-swiper-content {
+                        width: 100%;
+                        padding: 50px 30px;
+                        position: relative;
+                        align-items: center;
+
+                        .label {
+                            position: absolute;
+                            top: -13px;
+                            padding: 4px 25px;
+                        }
+
+                        h2 {
+                            align-self: flex-start;
+                        }
+
+                        p {
+                            align-self: flex-start;
+                        }
+                    }
+
+                    .ct-swiper-image {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .custom-ct-swiper-container {
+        .custom-ct-swipwer-main {
+            .custom-ct-swiper {
+                .custom-ct-swiper-slide-container {
+                    .ct-swiper-content {
+                        width: 100%;
+                        padding: 25px 20px;
+                    }
+                }
+            }
+
+            .custom-ct-actions {
+                justify-content: center;
+
+                .custom-ct-act-btns {
+                    display: none;
+                }
+            }
+        }
+    }
+}
