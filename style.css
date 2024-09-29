@@ -20,6 +20,7 @@ body {
     max-width: 1280px;
     width: 90%;
     height: 480px;
+    margin: 0 auto;
 
     .custom-ct-swipwer-main {
         .custom-ct-swiper {
@@ -40,35 +41,35 @@ body {
                     padding: 0 7%;
 
                     .label {
-                        font-family: 'Roboto';
+                        font-family: "Roboto";
                         font-size: 12px;
                         font-weight: 500;
                         line-height: 20px;
                         letter-spacing: 0.1px;
                         padding: 3px 6px;
-                        background: #2A49E5;
+                        background: #2a49e5;
                         border-radius: 6px;
                         color: #fff;
                         max-width: max-content;
                     }
 
                     h2 {
-                        font-family: 'Inter';
+                        font-family: "Inter";
                         font-size: 28px;
                         font-weight: 400;
                         line-height: 36px;
                         letter-spacing: 0.12800000607967377px;
-                        color: #1D1D1F;
+                        color: #1d1d1f;
                         margin: 20px 0 14px;
                     }
 
                     p {
-                        font-family: 'Inter';
+                        font-family: "Inter";
                         font-size: 15px;
                         font-weight: 400;
                         line-height: 24px;
                         letter-spacing: -0.27000001072883606px;
-                        color: #1D1D1F;
+                        color: #1d1d1f;
                     }
 
                     ._btn {
@@ -148,7 +149,7 @@ body {
                 .swiper-pagination-bullet {
                     background: #afb0b5;
                     border-radius: 10px;
-                    transition: all .3s ease;
+                    transition: all 0.3s ease;
                     height: 8px;
                     width: 8px;
                     margin: 0 6px;
@@ -176,16 +177,16 @@ body {
                     align-items: center;
                     border: none;
                     outline: none;
-                    background: #DBE1E7;
-                    color: #ABB0B4;
+                    background: #dbe1e7;
+                    color: #abb0b4;
                     border-radius: 50%;
                     font-size: 20px;
-                    transition: all .3s ease;
+                    transition: all 0.3s ease;
                     cursor: pointer;
 
                     &:hover {
-                        background: #CBD2D9;
-                        color: #595C5F;
+                        background: #cbd2d9;
+                        color: #595c5f;
                     }
                 }
             }
@@ -193,13 +194,13 @@ body {
     }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .custom-ct-swiper-container {
         height: max-content;
 
         .custom-ct-swipwer-main {
             .custom-ct-swiper {
-                border: 1px solid #DADCE0;
+                border: 1px solid #dadce0;
                 border-radius: 20px;
 
                 .custom-ct-swiper-slide-container {
@@ -236,7 +237,7 @@ body {
     }
 }
 
-@media (max-width:576px) {
+@media (max-width: 576px) {
     .custom-ct-swiper-container {
         .custom-ct-swipwer-main {
             .custom-ct-swiper {
